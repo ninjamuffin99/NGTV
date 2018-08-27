@@ -1,0 +1,16 @@
+/**
+ * @preserve Copyright (c) 2013-present British Broadcasting Corporation. All rights reserved.
+ * @license See https://github.com/bbc/tal/blob/master/LICENSE for full licence
+ */
+
+.transition {
+	-moz-transition: top 0.5s ease-in-out, -moz-transform 0.5s ease-in-out;
+	-webkit-transition: top 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out, -o-transform 0.5s ease-in-out;
+	transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+	-moz-transition: left 0.5s ease-in-out, -moz-transform 0.5s ease-in-out;
+	-webkit-transition: left 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+	-o-transition: left 0.5s ease-in-out, -o-transform 0.5s ease-in-out;
+	transition: left 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
