@@ -73,6 +73,7 @@ app.get('/', function (req, res) {
   });
 });
 
+app.use('/cheerio', express.static('node_modules/cheerio'));
 app.use('/tal', express.static('node_modules/tal'));
 app.use('/static', express.static('static'));
 

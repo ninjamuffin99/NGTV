@@ -34,9 +34,10 @@ define(
 		"antie/widgets/grid",
 		"antie/datasource",
 		"sampleapp/appui/formatters/simpleformatter",
-		"sampleapp/appui/datasources/simplefeed"
+		"sampleapp/appui/datasources/simplefeed",
+		"cheerio/cheerio"
 	],
-	function (Component, Button, Label, VerticalList, Carousel, Grid, DataSource, SimpleFormatter, SimpleFeed) {
+	function (Component, Button, Label, VerticalList, Carousel, Grid, DataSource, SimpleFormatter, SimpleFeed, Cheerio) {
 
 		// All components extend Component
 		return Component.extend({
@@ -48,15 +49,10 @@ define(
 				// It is important to call the constructor of the superclass
 				init.base.call(this, "simplecomponent");
 
-
-				
-
 				// Add the labels to the component
 				helloWorldLabel = new Label("helloWorldLabel", "Hello World");
 				this.appendChildWidget(helloWorldLabel);
-
 				
-
 				welcomeLabel = new Label("welcomeLabel", "Welcome to your first TAL application!");
 				this.appendChildWidget(welcomeLabel);
 
@@ -84,8 +80,6 @@ define(
 						gridThing.setWidgetAt(i, e, new Label("Whatever" + i + e));
 					}
 				}
-
-				
 
 				// Create a vertical list and append the buttons to navigate within the list
 				verticalListMenu = new VerticalList("mainMenuList");
