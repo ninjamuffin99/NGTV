@@ -28,6 +28,7 @@ var express = require('express');
 var app = express();
 var AntieFramework = require('tal');
 var mustacheExpress = require('mustache-express');
+var cheerio = require('cheerio');
 
 // Setup mustache for view templating
 app.engine('mustache', mustacheExpress());

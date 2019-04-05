@@ -35,7 +35,7 @@ define(
 		"antie/datasource",
 		"sampleapp/appui/formatters/simpleformatter",
 		"sampleapp/appui/datasources/simplefeed",
-		"cheerio/cheerio"
+		"cheerio/index"
 	],
 	function (Component, Button, Label, VerticalList, Carousel, Grid, DataSource, SimpleFormatter, SimpleFeed, Cheerio) {
 
@@ -95,6 +95,16 @@ define(
 					self.getCurrentApplication().ready();
 					self.removeEventListener('aftershow', appReady);
 				});
+
+				
+
+				const options = {
+					uri: `https://ninjamuffin99.newgrounds.com`,
+					transform: function (body) {
+					  return Cheerio.load(body);
+					}
+				  };
+				  //console.log(options.transform());
 			},
 
 			_createCarouselButton: function () {
